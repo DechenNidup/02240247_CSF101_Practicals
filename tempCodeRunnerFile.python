@@ -1,4 +1,11 @@
+def linear_search(array, target):
+    result = []
+    for i in range(len(array)):
+        if array[i] == target:  # compare element, not index
+            result.append(i)    # store the index
+    return result if result else "Not Found"
 
-family=["Dad", "Mom","Sis", "Bro"]
-arraylength=len(family)
-family.append("Me") 
+sample_array = [1, 3, 5, 2, 3, 8, 3, 5, 3, 4, 2]
+result = linear_search(sample_array, 3)
+print(result)
+
